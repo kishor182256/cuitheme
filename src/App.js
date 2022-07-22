@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import { Container, Flex, HStack, Stack } from '@chakra-ui/react';
+import Cart from './components/Cart';
+import Details from './components/Details';
+import Navbar from './components/Navbar';
+import PostPage from './components/PostPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Stack style={{ background:'gray',color:'#FFFFFF'}} textStyle='h1'>
+  
+      <Navbar />
+      <Details  />
+      <Cart />
+      <HStack style={{display: 'flex',
+      flexWrap: 'wrap',marginLeft: '10px',gap: '10px',backgroundColor:'#FFFFFF' ,color:'gray'}}>
+      <PostPage/> <PostPage/> <PostPage/> <PostPage/> <PostPage/> <PostPage/> <PostPage/> <PostPage/>
+      </HStack>
+    
+  
+    </Stack>
   );
 }
 
